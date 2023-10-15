@@ -1,0 +1,60 @@
+<div class="data-container">
+<div class="data-container mx-auto" style="max-width: 1200px;">
+  <p class="fs-1 fw-bold text-center">Welcome to Customer Information</p>
+
+  <br>
+
+ 
+    <div *ngIf="loading">
+      <app-spinner></app-spinner>
+    </div>
+    <!-- <div class="text-right my-2 mx-2">
+      <button class="btn btn-outline-dark" (click)="onSort('name')">
+        <i class="fa fa-filter"></i>
+      </button>
+    </div> -->
+
+    <div class="d-flex">
+      <form class="d-flex align-right search-form">
+        <input type="search" class="form-control me-2 search-box" placeholder="Search" #searchBox>
+        <button class="btn btn-outline-dark" (click)="onSearch(searchBox.value)" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <button class="btn btn-outline-dark mx-2" (click)="onSort('name')">
+        <i class="fa fa-filter"></i>
+      </button>
+
+    </div>
+
+    <div class="container-fluid card-container mt-4">
+      <div class="card-scroll">
+        <div class="card" *ngFor="let customer of filteredCustomers">
+          <div class="card-header" title="Customer ID: {{ customer.id }}">
+            Customer ID: {{ customer.id }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title name" title="Customer's Name" style="cursor: pointer;">Name: {{ customer.name }}</h5>
+            <p class="card-text" title="Customer's Address" style="cursor: pointer;">Address: {{ customer.address }}</p>
+            <p class="card-text" title="Customer's Contact Number" style="cursor: pointer;">Contact: {{ customer.mobile }}</p>
+            <p class="card-text" title="Customer's Rating" style="cursor: pointer;">Feedback: {{ customer.rating }}</p>
+          </div>
+          <div class="card-footer">
+            <button routerLink="/customer/view/{{ customer.id }}" class="btn btn-info mx-1">
+              View
+              <i class="fa fa-eye"></i>
+            </button>
+            <button [routerLink]="'/customer/edit/' + customer.id" class="btn btn-warning mx-1">
+              Edit
+              <i class="fa fa-edit"></i>
+            </button>
+            <button (click)="onDelete(customer.id)" class="btn btn-danger">
+              Delete
+              <i class="fa fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

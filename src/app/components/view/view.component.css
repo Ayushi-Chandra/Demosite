@@ -1,0 +1,13 @@
+.center{
+    margin-left: 350px;
+}
+.fixed-height-container {
+    height: 100vh; 
+    position: fixed;
+    overflow: hidden;
+    
+}
+.name{
+    font-size: large;
+    font-weight: bold;
+}

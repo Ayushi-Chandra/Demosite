@@ -1,0 +1,64 @@
+{
+  "address": [],
+  "customers": [
+    {
+      "name": "Aditi",
+      "address": "Lucknow",
+      "mobile": 13245678990,
+      "rating": "nice",
+      "id": 5
+    },
+    {
+      "name": "Ritu",
+      "address": "Lucknow",
+      "mobile": 1234567890,
+      "rating": "amazing",
+      "id": 7
+    },
+    {
+      "name": "Rajan",
+      "address": "Lucknow",
+      "mobile": 9876543210,
+      "rating": "amazing",
+      "id": 9
+    },
+    {
+      "name": "Shreyansh",
+      "address": "Lucknow",
+      "mobile": 7905005695,
+      "rating": "Good",
+      "id": 10
+    },
+    {
+      "name": "Raj",
+      "address": "Kanpur",
+      "mobile": 9670303448,
+      "rating": "Needs improvement",
+      "id": 11
+    },
+    {
+      "name": "Amit",
+      "address": "Kanpur",
+      "mobile": 1234567890,
+      "rating": "Needs improvement",
+      "id": 12
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
